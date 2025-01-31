@@ -1,0 +1,621 @@
+<!doctype html>
+<html ⚡>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        <title>Palms</title>
+        <link rel="canonical" href="">
+
+        <script async src="https://cdn.ampproject.org/v0.js"></script>
+
+
+        <style amp-custom>
+
+            /* Typhography */
+            /* use Roboto for bigger ones, text use helvetica */
+            h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{font-family: 'Open Sans', sans-serif;}
+
+            p, a, span {
+                font-family: 'Open Sans', sans-serif;
+            }
+
+            h1,h2,h3,p, .navbar-items,.recent-list,.recent-list a,.navbar-items a, footer .basic-container .txt-center p span a {
+                color:#777777;
+            }
+
+            .recent-list,.recent-list a,.navbar-items a {
+                text-decoration: none;
+            }
+
+            .contact-bar, .contact-bar span a {
+                color: #A1A1A1;
+            }
+
+            .white {
+                color: white;
+            }
+
+            .black {
+                color: black;
+            }
+
+            .article-part-content div h2, .contact-bar span strong  {
+                font-weight: 800;
+            }
+            /* Typhography - end */
+            .no-decor {
+                text-decoration: none;
+            }
+
+            .no-list-style {
+                list-style: none;
+            }
+
+            .margin-auto {
+                margin: auto;
+            }
+
+            .no-margin {
+                margin: 0;
+            }
+
+            .margin-y-2em {
+                margin-block-start: 2em;
+                margin-block-end: 2em;
+            }
+
+            .inline-block {
+                display: inline-block;
+            }
+
+            .txt-center {
+                text-align: center;
+            }
+
+            .height-100 {
+                height: 100%;
+            }
+
+            .flex {
+                display: flex;
+            }
+
+            .flex-column {
+                flex-direction: column;
+            }
+
+            .space-between {
+                justify-content: space-between;
+            }
+
+            .flex-1 {
+                flex: 1;
+            }
+
+            .pad-y-10 {
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+
+            .pad-y-20 {
+                padding-top: 20px;
+                padding-bottom: 20px;
+            }
+
+            .pad-x-20 {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            body {
+
+            }
+
+            .basic-container {
+                margin: auto;
+            }
+
+            .basic-btn {
+                padding: 10px 20px;
+                background-color: #85cebc;
+            }
+
+            @media screen and (min-width:1280px) {
+                .basic-container {
+                max-width: 70%;
+            }
+            }
+
+            /* HEADER */
+            .contact-bar {
+                padding-left: 0;
+                
+            }
+
+            .bg-contact-bar {
+                background-color: #292929;
+            }
+
+            @media screen and (min-width:730px) {
+                .con-bar-elements + .con-bar-elements {
+                border-left: solid 1px #d3d3d3
+            }
+            }
+
+            header {
+                background-color: white;
+                position: sticky;
+                top: 0px;
+                z-index: 10;
+                box-shadow: 0 1px 0 rgba(0, 0, 0, .05);
+            }
+
+            .header-elements-container {
+                padding: 20px;
+                max-height: 92px;
+            }
+
+            .header-elements {
+                align-self: center;
+            }
+            /* logo */
+            .site-logo-wrapper {
+                width: 100%;
+                max-width: 138px;
+            }
+
+            /* logo - END */
+
+            /* Site Title */
+            .site-title {
+                width: 50vw;
+                font-size: 5vw;
+                margin: 0;
+            }
+
+            @media screen and (max-width:1000px) {
+                .site-title {
+                    display: none;
+                }
+            }
+            /* Site Title - END */
+
+            /* Navigation Bar */
+            .navbar-container {
+                gap:10px;
+                justify-content: center;
+            }
+
+            .navbar-items {
+                padding: 10px;
+            }
+
+
+            /* Navigation Bar - END */
+
+            /* HEADER - END */
+
+            /* Main */
+            
+            .main-content-widget {
+            }
+
+            /* Banner */
+            .banner-bg {
+                justify-content: center;
+            }
+
+            .banner-container {
+                flex-grow: 1;
+                aspect-ratio: 1920/800;
+                background: url(assets/images/banner-home.jpg) no-repeat center;
+                background-size: cover;
+                min-width: 1200px;
+            }
+
+            .page-title-container {
+                max-width: 100vw;
+                margin: auto;
+            }
+
+            .page-title {
+                text-shadow: 3px 3px 5px black;
+                padding: 0 20px;
+                text-align: center;
+            }
+
+            .page-title a {
+                text-decoration: none;
+                color: white;
+                font-size: 145%;
+            }
+
+            .page-title a span {
+                font-size: 160%;
+            }
+
+            @media screen and (max-width:600px) {
+                .page-title a {
+                    font-size: 100%;
+                }
+
+                .page-title a span {
+                    font-size: 140%;
+                }
+            }
+
+            @media screen and (max-width:450px) {
+                .page-title a {
+                    font-size: 80%;
+                }
+
+                .page-title a span {
+                    font-size: 130%;
+                }
+            }
+            /* Banner */
+            
+            /* Article Section */
+
+            
+
+            .blogs-container {
+                display: flex;
+                flex-direction:column;
+            }
+
+            .post-title {
+                color: white;
+            }
+
+            .post-list-wrapper {
+                position: relative;
+                overflow: hidden;
+                aspect-ratio: 406/225;
+            }
+
+            .post-list {
+                display: inline-grid;
+                grid-template-columns: repeat(auto-fit, minmax(270px,1fr));
+                gap: 20px;
+                /* khusus homepage */
+                /* margin-block-start: 1.5em; */
+                /* khusus homepage END*/
+
+            }
+            .post-list-card {
+                flex: 1 1 0px;
+            }
+
+            .featured-image {
+                /* khusus Homepage */
+                filter:brightness(0.75);
+                /* khusus Homepage End */
+            }
+
+            .featured-text-container {
+                text-shadow: 1px 1px 3px black;
+                position: absolute;
+                left: 4%;
+                bottom: 4%;
+                right: 4%;
+            }
+
+            .article-part-content div h2, footer .basic-container .txt-center h2 {
+                padding-bottom: 20px;
+                margin-bottom: 40px;
+                border-bottom: 2px solid #85cebc;
+                color: #f48466;
+            }
+
+            .article-section {
+                flex-direction: column;
+            }
+
+            .article-img-wrapper {
+                margin: auto;
+            }
+
+            .article-part-container {
+                background-color: white;
+            }
+
+            .article-part-content {
+                padding-top: 40px;
+                padding-bottom: 40px;
+            }
+
+            .mask-brightness-07 {
+                background-color: rgba(17,17,17,.7);
+            }
+
+            .background-1 {
+                height: 400px;
+                background: url(assets/images/background-1.jpg) no-repeat center fixed;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+                background-color: #1c120c;
+                background-attachment:fixed;
+                position:relative;
+                overflow:hidden;
+            }
+
+            .background-2 {
+                height: 400px;
+                background: url(assets/images/background-2.jpg) no-repeat center fixed;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+                background-color: #1c120c;
+                background-attachment:fixed;
+                position:relative;
+                overflow:hidden;
+            }
+
+            .background-3 {
+                height: 400px;
+                background: url(assets/images/background-3.jpg) no-repeat center fixed;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+                background-color: #1c120c;
+                background-attachment:fixed;
+                position:relative;
+                overflow:hidden;
+            }
+
+            @media screen and (max-width: 599px) {
+                .article-section .article-part-container .basic-container p, .article-section .article-part-container .basic-container .post-list {
+                    margin-bottom: 0;
+                    padding: 0 3vw;
+                }
+
+                .article-part-container .basic-container h2, footer .basic-container .txt-center h2 {
+                    margin-left: 3vw;
+                    margin-right: 3vw;
+                }
+            }
+
+            @media screen and (max-width: 749px) {
+                .post-list {
+                    /* flex-direction: column; */
+                }
+
+                .post-list-card {
+                    /* width: 100%;
+                    height: 100%; */
+                }
+            }
+
+            @media screen and (min-width: 600px) {
+                .article-img-wrapper {
+                    padding: 3%;
+                    width: 75%;
+                }
+                .article-section .article-part-container .basic-container p, .article-section .article-part-container .basic-container .post-list {
+                    padding: 0 12.5vw;
+                }
+
+                .article-part-container .basic-container h2, footer .basic-container .txt-center h2 {
+                    margin-left: 12.5vw;
+                    margin-right: 12.5vw;
+                }
+            }
+            @media screen and (min-width: 750px) {
+                .post-list {
+                    /* gap: 15px; */
+                }
+
+                .post-list-card {
+                    /* min-width: 250px; */
+                }
+            }
+            @media screen and (min-width: 1000px) {
+                .article-img-wrapper {
+                    width: 50%;
+                }
+            }
+            
+            @media screen and (min-width: 1280px) {
+                .article-section .article-part-container .basic-container p, .article-section .article-part-container .basic-container .post-list {
+                    padding: 0;
+                }
+
+                .article-part-container .basic-container h2, footer .basic-container .txt-center h2 {
+                    margin-left: 0;
+                    margin-right: 0;
+                }
+            }
+
+            .recent-list {
+                list-style: none;
+                padding-left: 0;
+            }
+
+            .recent-list li {
+                padding: 10px;
+            }
+            /* Article Section - END */
+
+            /* Main - END */
+
+            /* Footer */
+            footer {
+                background-color: white;
+                padding: 6%;
+            }
+            /* Footer - END */
+
+
+        </style>
+
+        <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    </head>
+
+    <body>
+        <header>
+            <div class="bg-contact-bar">
+                <div class="basic-container">
+                    <ul class="contact-bar no-margin pad-y-10">
+                        <li class="con-bar-elements phone-num no-list-style inline-block pad-x-20">
+                            <span><strong>Call Today</strong> :</span>
+                            <span>(844) 695-1471</span>
+                        </li>
+                        <li class="con-bar-elements location no-list-style inline-block pad-x-20">
+                            <span><strong>Locations</strong> :</span>
+                            <span><a href="" class="no-decor">9599 West Charleston Blvd Las Vegas NV 89117</a></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="basic-container">
+                <nav class="flex space-between header-elements-container">
+                    <a class="header-elements site-logo-wrapper" href="">
+                        <amp-img src="assets/images/logo-palms-at-peccole.jpg"
+                            width="150"
+                            height="100"
+                            layout="responsive"
+                            alt="Palms at Peccole Ranch">
+                        </amp-img>
+                    </a>
+                    <div class="header-elements navbar-container flex">
+                        <div class="navbar-items"><a href="">Home</a></div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="main-content-container">
+                <!-- Article -->
+                <div class="main-content-widget article-section flex">
+                    <div class="article-part-container flex banner-bg">
+                        <div class="banner-container flex">
+                            <div class="basic-container pad-y-20">
+                                <div class="page-title-container">
+                                    <h1 class="page-title"><a href=""><span>Palms at Peccole Ranch</span><br>The Next Phase in Las Vegas Living</a></h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="article-part-container article-part-content">
+                        <div class="basic-container pad-y-20 txt-center">
+                            <h2>THE PALMS AT PECCOLE RANCH APARTMENT HOMES</h2>
+                            <p>At The Palms at Peccole Ranch, you can choose from the spacious 1, 2 or 3 bedroom floor plan that fits your needs best. All of our apartments in West Las Vegas offer large walk-in closets, a fully-equipped kitchen with Whirlpool appliances and a full-size washer and dryer. In addition, all residents of our Summerlin, Las Vegas, NV apartments enjoy the benefits of living within the Peccole Ranch community, including two resort-style swimming pools with spas, access to the Peccole Ranch Clubhouse, outdoor gas grills, and 18-hole Frisbee Disc Golf course, a volleyball court, tennis court, and a 24-hour fitness center. A pet-friendly community, The Palms at Peccole Ranch offers conveniences to make your day-to-day routine operate more smoothly.</p>
+                        </div>
+                    </div>
+                    <div class="article-part-container background-1 flex">
+                        <div class="flex mask-brightness-07 flex-1">
+                            <div class="basic-container pad-y-20 txt-center">
+                                <h2 class="white">YOUR NEW NEIGHBORHOOD IN LAS VEGAS</h2>
+                                <p class="white">Our Las Vegas apartment community is surrounded by a variety of shopping and restaurants, including Boca Park and the Shops at Summerlin, within walking distance to US Bank, just 9.5 miles east of the Las Vegas Strip, and located in excellent proximity to seven golf courses, including Canyon Gate Country Club.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="article-part-container article-part-content">
+                        <div class="basic-container pad-y-20 txt-center">
+                            <h2>PERFECTLY LOCATED IN LAS VEGAS, NEVADA</h2>
+                            <p>The Palms at Peccole Ranch also provides easy access to Interstates 215 & 15, US-95 and is a quick 25 minute drive to McCarran International Airport. So whether you prefer to relax in the comfort of your own Summerlin apartment home or get out and enjoy the city life, our apartments in Summerlin, Las Vegas, NV offer endless options to meet your needs.</p>
+                        </div>
+                    </div>
+                    <div class="article-part-container background-2 flex">
+                        <div class="flex mask-brightness-07 flex-1">
+                            <div class="basic-container pad-y-20 txt-center">
+                                <h2 class="white">Las Vegas Refined</h2>
+                                <p class="white">Beauty and spaciousness are the norm at The Palms of Peccole Ranch. Calling these apartment homes is the first step to a life of relaxation and bliss. View our gallery to see what could be your future.</p>
+                                <h3 class="margin-y-2em"><a href="#" class="basic-btn no-decor white"><strong>View Gallery</strong></a></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="article-part-container article-part-content">
+                        <div class="basic-container pad-y-20 txt-center blogs-container">
+                            <h2>Blogs</h2>
+                            <div class="post-list">
+                                <div class="post-list-card">
+                                    <a href="#">
+                                        <div class="post-list-wrapper">
+                                            <!-- techdebt - belum support buat gambar yang terlalu panjang ketimbang tinggi dari aspect ratio post-list-wrapper -->
+                                            <div class="featured-image">
+                                                <amp-img src="assets/images/palms-at-peccole-leasing-office.webp"
+                                                    width="1920"
+                                                    height="1440"
+                                                    layout="responsive"
+                                                    alt="">
+                                                </amp-img>
+                                            </div>
+                                            <div class="featured-text-container">
+                                                <h3 class="post-title">Strategy to pick good neighborhood to live</h2>
+                                                <!-- <p class="post-excerpt">Jika Anda ingin download Bloons TD 6 Mod Apk versi terbaru, maka Anda harus datang ke Gamersbruh.com. Di Gamersbruh.com Anda dapat mengunduh Bloons TD 6 Mod APK v34.3 secara gratis.</p> -->
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="post-list-card">
+                                    <a href="#">
+                                        <div class="post-list-wrapper">
+                                            <!-- techdebt - belum support buat gambar yang terlalu panjang ketimbang tinggi dari aspect ratio post-list-wrapper -->
+                                            <div class="featured-image">
+                                                <amp-img src="assets/images/palms-at-peccole-gym.webp"
+                                                    width="1920"
+                                                    height="1440"
+                                                    layout="responsive"
+                                                    alt="">
+                                                </amp-img>
+                                            </div>
+                                            <div class="featured-text-container">
+                                                <h3 class="post-title">How to Pick a good place to live</h2>
+                                                <!-- <p class="post-excerpt">Jika Anda ingin download Bloons TD 6 Mod Apk versi terbaru, maka Anda harus datang ke Gamersbruh.com. Di Gamersbruh.com Anda dapat mengunduh Bloons TD 6 Mod APK v34.3 secara gratis.</p> -->
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="post-list-card">
+                                    <a href="#">
+                                        <div class="post-list-wrapper">
+                                            <!-- techdebt - belum support buat gambar yang terlalu panjang ketimbang tinggi dari aspect ratio post-list-wrapper -->
+                                            <div class="featured-image">
+                                                <amp-img src="assets/images/palms-at-peccole-pool.webp"
+                                                    width="1920"
+                                                    height="1440"
+                                                    layout="responsive"
+                                                    alt="">
+                                                </amp-img>
+                                            </div>
+                                            <div class="featured-text-container">
+                                                <h3 class="post-title">Palms at Pecole Ranch Neighborhood</h2>
+                                                <!-- <p class="post-excerpt">Jika Anda ingin download Bloons TD 6 Mod Apk versi terbaru, maka Anda harus datang ke Gamersbruh.com. Di Gamersbruh.com Anda dapat mengunduh Bloons TD 6 Mod APK v34.3 secara gratis.</p> -->
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="article-part-container background-3 flex">
+                    </div>
+                </div>
+                <!-- Article - END -->
+            </div>
+        </main>
+        <footer>
+            <div class="basic-container">
+                <div class="txt-center">
+                    <h2>9599 WEST CHARLESTON BLVD LAS VEGAS, NV 89117</h2>
+                    <p><span>Palms at Peccole Ranch</span>
+                        <span><br>9599 West Charleston Blvd</span>
+                        <span><br>Las Vegas, NV, 89117</span>
+                        <span><br>(844) 695-1471</span>
+                        <span><br>Email Us</span>
+                        <span><br>Copyright © 2023</span>
+                        <span><br>Palms at Peccole Ranch Apartments. All rights reserved.</span>
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+    </body>
+</html>

@@ -1,0 +1,915 @@
+<!doctype html>
+<html ⚡>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+        <link rel="apple-touch-icon" href="assets/images/logo-square.png">
+        <link href="assets/images/logo-square.png" rel="shortcut icon" type="image/x-icon" />
+        <title>Think Freely Media</title>
+        <link rel="canonical" href="">
+
+        <script async src="https://cdn.ampproject.org/v0.js"></script>
+        <script async custom-element="amp-fx-collection" src="https://cdn.ampproject.org/v0/amp-fx-collection-0.1.js"></script>
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Raleway:wght@400;700;900&display=swap" rel="stylesheet">
+
+        <style amp-custom>
+
+            /* Typhography */
+            h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6, .nav-menu-item, .header-button-wrapper, .footer-content-container>p {font-family: 'Montserrat', sans-serif;}
+            
+
+            p,.footer-nav-item {
+                font-family: 'Raleway', sans-serif;
+                font-size: 1.125rem;
+                line-height: 1.875rem;
+            }
+
+            a {
+                font-weight: 700;
+                text-decoration: none;
+            }
+
+            strong {
+                font-weight: 900;
+            }
+
+            .bold {
+                font-weight: 700;
+            }
+
+            .h1 {
+                font-size: 3.4375rem;
+            }
+
+            h2 {
+                color: #081359;
+            }
+
+            .h2 {
+                font-size: 3.75rem;
+            }
+
+            .h3 {
+                font-size: 3.125rem;
+                line-height: 3.5rem;
+            }
+
+            .h4 {
+                font-size: 2.5rem;
+                line-height: 2.875rem;
+            }
+
+            .h5 {
+                font-size: 1.5625rem;
+                line-height: 1.875rem;
+            }
+
+            .site-title, .sidebar-title {
+                color: #82bfb6;
+            }
+
+            h3,p, .recent-list,.recent-list a,.navbar-items a, footer .basic-container .txt-center p span a {
+                color:#454545;
+            }
+
+            .navbar-items, .navbar-items a, .sidebar-menu-item {
+                color:#091353;
+                font-weight: 800;
+                font-size: 13px;
+            }
+
+            .recent-list,.recent-list a,.navbar-items a {
+                text-decoration: none;
+            }
+
+            .contact-bar, .contact-bar span a {
+                color: #A1A1A1;
+            }
+
+            .red {
+                color: #C51532;
+            }
+
+            .white {
+                color: white;
+            }
+
+            .black {
+                color: black;
+            }
+
+            .article-part-content div h2, .contact-bar span strong  {
+                font-weight: 800;
+            }
+            /* Typhography - end */
+
+            .flex {
+                display: flex;
+            }
+
+            .flex-1 {
+                flex: 1;
+            }
+
+            .grid {
+                display: grid;
+            }
+
+            .no-list-style {
+                list-style: none;
+            }
+
+            .txt-center {
+                text-align: center;
+            }
+
+            .vertical-mid {
+                vertical-align: middle;
+            }
+
+            .base-margin {
+                max-width: 60rem;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .add-margin {
+                max-width: 70%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .section-padding {
+                padding-top: 110px;
+                padding-bottom: 110px;
+            }
+
+            .white-mask-bg {
+                background-color: rgba(254,254,255,.65);
+                height: 100%;
+                width: 100%;
+            }
+
+            .red-button, .red-bg {
+                background-color: #C51532;
+            }
+
+            .black-button {
+                background-color: #000000;
+            }
+
+            /* HEADER */
+            header {
+                position: fixed;
+                overflow: hidden;
+                top: 0;
+                width: 100vw;
+                z-index: 10;
+            }
+
+            .header-margin {
+                max-width: 75rem;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .header-bg {
+                background-color: white;
+            }
+
+            .header-container {
+                height: 100px;
+                margin: 10px;
+            }
+
+            .header-container-child {
+                max-height: 100%;
+            }
+
+            .header-logo-container {
+                flex:0.3;
+                padding: 10px;
+            }
+
+            .logo-wrapper {
+                height: 100%;
+                aspect-ratio: 611/258;
+            }
+
+            .navigation-menu-container {
+                flex:0.7;
+            }
+
+            .navigation-menu {
+                margin-top: 0;
+                margin-bottom: 0;
+                padding-inline-start: 0;
+                justify-content: space-around;
+                height: 100%;
+            }
+
+            .nav-menu-item {
+                flex: 1;
+                height: 100%;
+            }
+
+            .nav-menu-item>a {
+                height: 100%;
+                width: 100%;
+                align-items: center;
+                font-size: 0.875rem;
+            }
+
+            .nav-menu-item>a>span {
+                margin: auto;
+                color: #000000;
+            }
+
+            .header-button-container {
+                flex:0.2;
+                align-items: center;
+                justify-content: center;
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+
+            .header-button-wrapper {
+                padding: 20px 50px;
+            }
+
+            .header-button-wrapper>.button>span {
+                color: #FFFFFF;
+            }
+
+            /* HEADER - END */
+
+            /* BANNER */
+            .banner-container {
+                position: relative;
+            }
+
+            .banner-bg {
+                background-image: url(assets/images/home_hero.png);
+                background-size: cover;
+                background-position: center;
+                position: absolute;
+                height: 100%;
+                width: 100%;
+            }
+
+            .banner.bubble-text-container {
+                padding-top: 25vh;
+                padding-bottom: 25vh;
+            }
+
+            .bubble {
+                position: relative;
+                padding: 100px 150px;
+                background-color: rgba(254,254,255,.75);
+            }
+
+            .bubble:after {
+                content: '';
+                position: absolute;
+                left: 0;
+                border-width: 5rem 5rem 0 0;
+                bottom: -5rem;
+                border-style: solid;
+                border-color: rgba(254,254,255,.75) transparent transparent transparent;
+            }
+
+            
+            /* BANNER END */
+
+            /* QUOTE */
+            .about-us-quote {
+                background-color: #000000;
+            }
+            /* QUOTE - END */
+
+            .who-image {
+                /* flex: 0.5; */
+                width: 50%;
+                background-image: url(assets/images/who-we-are_bg.png);
+                background-size: cover;
+                background-position: right;
+            }
+            
+            .who-solid {
+                /* flex: 0.5; */
+                width: 50%;
+                min-width: 750px;
+                background-color: #C51532;
+            }
+
+            .who-text-container {
+                margin-left: 10vw;
+                margin-right: 10vw;
+            }
+
+            .about-us-what {
+                position: relative;
+            }
+
+            .what-bg {
+                background-image: url(assets/images/what-we-do_bg.png);
+                background-size: cover;
+                background-position: center;
+                position: absolute;
+                height: 100%;
+                width: 100%;
+            }
+
+            .what.bubble-text-container {
+                padding-top: 45vh;
+                padding-bottom: 45vh;
+            }
+
+            .about-us-how {
+                height: 240px;
+            }
+
+            .how-flex-child {
+                flex: 1;
+                position: relative;
+            }
+
+            .how-text-container {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: -10%;
+                overflow: hidden;
+                z-index: 3;
+                background-color: rgba(247,247,247,1);
+                padding: 40px 30px;
+                max-width: 380px;
+            }
+
+            .how-text-container>.text-container {
+                text-align: end;
+            }
+
+            .how-text-container>.text-container>.h4 {
+                margin-top: 0;
+            }
+
+            .how-text-container>.text-container>.black {
+                margin-bottom: 0;
+            }
+
+            .how-image-container {
+                position: absolute;
+                top: -150px;
+                left: -15%;
+                overflow: hidden;
+                z-index: 2;
+                width: 100%;
+                max-width: 792px;
+                min-width: 600px;
+                justify-content: center;
+            }
+
+            .how-image-container>.image-container {
+                aspect-ratio: 1502/1156;
+                min-height: 570px;
+            }
+
+            .donate-content-container {
+                padding-top: 150px;
+                position: relative;
+            }
+
+            .donate-content-container>.text-container {
+                flex-direction: column;
+            }
+
+            .about-us-donate-button {
+                display: block;
+                padding: 20px 50px;
+                max-width: 150px;
+            }
+
+            .about-us-donate-button>.button>span {
+                color: #FFFFFF;
+            }
+
+            .red-accent-svg-container {
+                position: absolute;
+                bottom: -150px;
+                left: -10%;
+            }
+
+            .our-program-container {
+                max-width: 75rem;
+                margin: auto;
+            }
+
+            .program-container {
+                grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+                /* grid-auto-rows: 1fr; */
+                grid-gap: 30px;
+                margin: 20px;
+                max-width: 1200px;
+            }
+
+            .our-program-desc {
+                grid-column: span 2;
+                padding: 3.125rem 2.5rem;
+            }
+
+            .program-card {
+                flex-direction: column;
+                padding: 3.125rem 2.5rem;
+                background-color: #f2f2f2;
+            }
+
+            .program-card>.image-container>.image-wrapper {
+                max-height: 90px;
+                margin: auto;
+            }
+
+            .contact-us {
+                background-color: #f2f2f2;
+            }
+
+            .footer {
+                background-color: #000000;
+                position: relative;
+            }
+
+            .footer-logo-container {
+                position: absolute;
+                top: -40px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .footer-logo-container>.square-logo-wrapper {
+                width: 80px;
+                aspect-ratio: 80/80;
+            }
+
+            .footer-content-container {
+                padding-top: 90px;
+                padding-bottom: 75px;
+            }
+
+            .footer-nav-list {
+                padding-inline-start: 0;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 20px;
+            }
+
+            .bottom-red-line {
+                height: 8px;
+            }
+            /* RESPONSIVE */
+
+            @media screen and (min-width:600px) {
+                .donate-content-container>.text-container>.h3 {
+                    font-size: 2.875rem;
+                    line-height: 3rem;
+                }
+            }
+
+            @media screen and (min-width:1024px) {
+                .how-text-container {
+                    padding: 60px 75px;
+                }
+            }
+
+            @media screen and (max-width:1204px) {
+                .base-margin {
+                    max-width: unset;
+                    margin-left: 10vw;
+                    margin-right: 10vw;
+                }
+            }
+
+            @media screen and (max-width:900px) {
+                .bubble {
+                    padding: 5vw;
+                }
+            }
+
+            @media screen and (max-width:849px) {
+                .navigation-menu-container {
+                    display: none;
+                }
+
+                .header-container{
+                    justify-content: space-between;
+                }
+            }
+            
+            @media screen and (max-width:750px) {
+                .about-us-who {
+                    flex-direction: column;
+                }
+
+                .who-image {
+                    height: 40vh;
+                }
+
+                .who-image,.who-solid {
+                    width: unset;
+                }
+                
+                .who-solid {
+                    min-width: unset;
+                }
+
+                .what.bubble-text-container {
+                    padding-top: 25vh;
+                    padding-bottom: 25vh;
+                }
+                
+                .section-padding {
+                    padding-top: 60px;
+                    padding-bottom: 60px;
+                }
+
+                .h1 {
+                    font-size: 3rem;
+                }
+                
+                .h3 {
+                    font-size: 1.5rem;
+                    line-height: 2rem;
+                }
+                
+                .h4 {
+                    font-size: 1.25rem;
+                    line-height: 1.75rem;
+                }
+            }
+            @media screen and (max-width:749px) {
+                .our-program-desc {
+                    grid-column: unset;
+                }
+            }
+
+            @media screen and (max-width:600px) {
+                .base-margin {
+                    margin-left: 5vw;
+                    margin-right: 5vw;
+                }
+
+                .add-margin {
+                    max-width: 100%;
+                }
+                
+
+                .h5 {
+                    font-size: 1.125rem;
+                    line-height: 1.25rem;
+                }
+
+                .banner.bubble-text-container {
+                    padding-top: 20vh;
+                    padding-bottom: 15vh;
+                }
+
+                .what.bubble-text-container {
+                    padding-top: 15vh;
+                    padding-bottom: 15vh;
+                }
+
+                .bubble:after {
+                    border-width: 2.5rem 2.5rem 0 0;
+                    bottom: -2.5rem;
+                }
+
+                .how-text-container {
+                    max-width: unset;
+                    margin-left: 5vw;
+                    margin-right: 5vw;
+                    right: unset;
+                }
+
+                .how-image {
+                    display: none;
+                }
+
+                .donate-content-container {
+                    padding-top: 0;
+                }
+
+                .donate-content-container>.text-container {
+                    text-align: center;
+                }
+
+                .about-us-donate-button {
+                    margin: auto;
+                }
+
+                .red-accent-svg-container {
+                    display: none;
+                }
+                
+                .program-card, .our-program-desc {
+                    padding: 1.875rem;
+                }
+            }
+
+            @media screen and (max-width:449px) {
+                .header-button-container {display: none;}
+                .header-container {justify-content: center;}
+            }
+
+            @media screen and (max-width:400px) {
+                .h1 {
+                    font-size: 2.25rem;
+                }
+            }
+
+            @media screen and (max-width:360px) {
+                .program-container {
+                    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                }
+            }
+            
+            /* RESPONSIVE - END */
+            .section {
+                width: 100vw;
+            }
+            </style>
+
+        <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    </head>
+
+    <body>
+        <header class="header-bg" amp-fx="float-in-top">
+            <div class="header-margin">
+                <div class="header-container flex">
+                    <div class="header-container-child header-logo-container">
+                        <div class="logo-wrapper">
+                            <amp-img src="assets/images/logo.png"
+                              width="611"
+                              height="258"
+                              layout="responsive"
+                              alt="Logo">
+                            </amp-img>
+                        </div>
+                    </div>
+                    <nav class="header-container-child navigation-menu-container">
+                        <ul class="navigation-menu flex no-list-style">
+                            <li class="nav-menu-item txt-center"><a href="" class="flex"><span class="">ABOUT US</span></a></li>
+                            <li class="nav-menu-item txt-center"><a href="" class="flex"><span class="">PROGRAMS</span></a></li>
+                            <li class="nav-menu-item txt-center"><a href="" class="flex"><span class="">CONTACT US</span></a></li>
+                            <li class="nav-menu-item txt-center"><a href="" class="flex"><span class="">SUBSCRIBE</span></a></li>
+                        </ul>
+                    </nav>
+                    <div class="header-container-child header-button-container flex">
+                        <a class="header-button-wrapper red-button" href="">
+                            <div class="button">
+                                <span>DONATE</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="banner-container">
+            <div class="banner-bg">
+                <div class="white-mask-bg"></div>
+            </div>
+            <div class="base-margin">
+                <div class="banner bubble-text-container">
+                    <div class="bubble">
+                        <div class="bubble-text">
+                            <p class="h5 red txt-center"><strong>STORYTELLING SHAPES HEARTS, MINDS, AND IDEAS. OUR WORK HELPS OTHER NON-PROFIT ORGANIZATIONS ADVANCE THE CAUSES OF ACHIEVEMENT, FREEDOM, AND EMPOWERMENT BY HARNESSING THE POWER OF STORIES.</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="about-us">
+            <div class="about-us-intro">
+                <div class="base-margin">
+                    <div class="add-margin">
+                        <div class="intro-text-container section-padding">
+                            <h1 class="h1 red"><strong>ABOUT US</strong></h1>
+                            <p>Individual freedom and free enterprise are the greatest forces for good ever created in the human sphere. The world has lost sight of that. We use our resources to help bring these ideas back into the light. We extend our counsel, grants, and programs to promote and help like-minded organizations to do the same.</p>
+                            <p><br>Our goal is to build even more resources and media capacities. We do this to strengthen advocacy for free markets and individual liberty, prevailing in culture as well as in law.</p>
+                            <p class="black"><br><strong>THINK FREELY STAFF</strong></p>
+                            <p>
+                                ERIC TUBBS, President
+                                <br><a href="mailto:etubbs@thinkfreelymedia.org">etubbs@thinkfreelymedia.org</a>
+                                <br>KAREN LINDBERG-VENTURA, External Relations Officer
+                                <br><a href="mailto:karen@thinkfreelymedia.org">karen@thinkfreelymedia.org</a>
+                            </p>
+                            <p><br><strong class="black">THINK FREELY BOARD</strong></p>
+                            <p>
+                                JOHN TILLMAN, Chairman
+                                <br>ERIC TUBBS, Secretary/Treasurer
+                                <br>BARRY BURDIAK, Board Member
+                                <br>SCOTT BARBEE, Board Member
+                                <br>CAROL WINFREY, Board Member
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-us-quote">
+                <div class="base-margin">
+                    <div class="quote-container section-padding">
+                        <p class="h3 txt-center"><strong class="white">"STORYTELLING IS THE MOST POWERFUL WAY TO PUT IDEAS INTO THE WORLD TODAY."<br><i>ROBERT MCKEE</i></strong></p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-us-who flex">
+                <div class="who-image">
+                    <!-- <div class="image-container"></div> -->
+                </div>
+                <div class="who-solid">
+                    <div class="who-text-container section-padding">
+                        <h2 class="h3 white"><strong>WHO WE ARE</strong></h2>
+                        <p class="h4 white"><strong>WE ARE A 501(C)3 NONPROFIT ORGANIZATION THAT BELIEVES THAT FREE ENTERPRISE AND LIBERTY UNLEASH THE ESSENCE OF THE HUMAN SPIRIT. CONTRIBUTIONS TO THINK FREELY MEDIA ARE TAX-DEDUCTIBLE TO THE FULLEST EXTENT PERMITTED BY LAW.</strong></p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-us-what">
+                <div class="what-bg">
+                    <div class="white-mask-bg"></div>
+                </div>
+                <div class="base-margin">
+                    <div class="what bubble-text-container">
+                        <div class="bubble">
+                            <div class="bubble-text">
+                                <p class="h4 red"><strong>WHAT WE DO</strong></p>
+                                <p class="h4 black"><strong>WE CHAMPION HUMAN FREEDOM AND ACHIEVEMENT TO HELP ALL PEOPLE LIVE FULFILLING, EMPOWERED LIVES.</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-us-how flex red-bg">
+                <div class="how-flex-child">
+                    <div class="how-text-container">
+                        <div class="text-container">
+                            <p class="h4 red"><strong>HOW WE DO IT</strong></p>
+                            <p class="black">We produce content, sponsor tournaments, and provide grants to increase the demand for human freedom and liberty.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="how-flex-child how-image">
+                    <div class="how-image-container flex">
+                        <div class="image-container">
+                            <amp-img src="assets/images/how-we-do-it_bg.png"
+                              width="1502"
+                              height="1156"
+                              layout="responsive"
+                              alt="How We Do It">
+                            </amp-img>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-us-donate">
+                <div class="base-margin">
+                    <div class="section-padding">
+                        <div class="donate-content-container add-margin">
+                            <div class="text-container flex">
+                                <p class="h3 red"><strong>LEARN ABOUT SUPPORTING OUR WORK AND HELP US CHANGE THE WORLD, ONE STORY AT A TIME.</strong></p>
+                                <div class="about-us-donate-button-wrapper">
+                                    <a href="" class="about-us-donate-button black-button">
+                                        <div class="button txt-center">
+                                            <span>DONATE</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="red-accent-svg-container">
+                                <svg width="357px" height="502px" viewBox="0 0 357 502" version="1.1" class="show-for-medium">
+                                    <g id="Design---1440" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <g id="Home-Page" transform="translate(-297.000000, -4827.000000)" stroke="#C51532" stroke-width="11">
+                                            <g id="Logo/Small/Red" transform="translate(303.000000, 4827.000000)">
+                                                <polyline id="Fill-1" points="-2.84217094e-14 0 -2.84217094e-14 488 58.2755283 429.110036 351 429.110036"></polyline>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="our-program">
+            <div class="our-program-container">
+                <div class="section-padding">
+                    <div class="program-container grid">
+                        <div class="our-program-desc">
+                            <h2 class="h3 red"><strong>OUR PROGRAMS</strong></h2>
+                            <p class="h4 black"><strong>WE PROMOTE FREE ENTERPRISE AND INDIVIDUAL LIBERTY IN MULTIPLE FORUMS.</strong></p>
+                        </div>
+                        <div class="program-card flex">
+                            <div class="image-container">
+                                <div class="image-wrapper" style="aspect-ratio: 363/164;">
+                                    <amp-img src="assets/images/great-communicator-summit.png"
+                                    width="363"
+                                    height="164"
+                                    layout="responsive"
+                                    alt="Great Communicator Summit">
+                                  </amp-img>
+                                </div>
+                            </div>
+                            <h3 class="h5 black txt-center"><strong>GREAT COMMUNICATORS SUMMIT</strong></h3>
+                            <p class="txt-center">Our August 31, 2020 summit in Chicago has been canceled. Stay tuned for updates!</p>
+                        </div>
+                        <div class="program-card flex">
+                            <div class="image-container">
+                                <div class="image-wrapper" style="aspect-ratio: 392/158;">
+                                    <amp-img src="assets/images/american-will.png"
+                                    width="392"
+                                    height="158"
+                                    layout="responsive"
+                                    alt="American + Will">
+                                  </amp-img>
+                                </div>
+                            </div>
+                            <h3 class="h5 black txt-center"><strong>AMERICAN + WILL</strong></h3>
+                            <p class="txt-center">American+Will celebrates success and achievement when too many in the media focus on failure and perceived inequity. American+Will tells the stories that inspire and bring us together.</p>
+                        </div>
+                        <div class="program-card flex">
+                            <div class="image-container">
+                                <div class="image-wrapper" style="aspect-ratio: 446/140;">
+                                    <amp-img src="assets/images/think-freely-marketing.png"
+                                    width="446"
+                                    height="140"
+                                    layout="responsive"
+                                    alt="Think Freely Marketing">
+                                  </amp-img>
+                                </div>
+                            </div>
+                            <h3 class="h5 black txt-center"><strong>THINK FREELY MARKETING</strong></h3>
+                            <p class="txt-center">Think Freely Marketing allows us to partner with organizations throughout our movement to effectively get our message in front of key audiences.</p>
+                        </div>
+                        <div class="program-card flex">
+                            <div class="image-container">
+                                <div class="image-wrapper" style="aspect-ratio: 805/325;">
+                                    <amp-img src="assets/images/great-communicator-tournament.png"
+                                    width="805"
+                                    height="325"
+                                    layout="responsive"
+                                    alt="Great Communicator Tournament">
+                                  </amp-img>
+                                </div>
+                            </div>
+                            <h3 class="h5 black txt-center"><strong>GREAT COMMUNICATORS TOURNAMENT</strong></h3>
+                            <p class="txt-center">Our August 31, 2020 summit in Chicago has been canceled. Stay tuned for updates!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contact-us">
+            <div class="base-margin">
+                <div class="section-padding">
+                    <h2 class="h3 red"><strong>CONTACT US</strong></h2>
+                    <p class="h4 black"><strong>WE WANT TO HEAR FROM YOU. SHOOT US AN EMAIL OR FILL OUT THIS FORM AND WE’LL BE IN TOUCH.</strong></p>
+                    <p><a href="" class="black"><span>300 S Riverside Plaza
+                        <br>Suite 1625
+                        <br>Chicago, IL 60606</span></a></p>
+                    <p><a href="tel:202-838-3175" class="black">202-838-3175</a></p>    
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="footer-logo-container">
+                <div class="square-logo-wrapper">
+                    <amp-img src="assets/images/logo-square.png"
+                      width="80"
+                      height="80"
+                      layout="responsive"
+                      alt="logo">
+                    </amp-img>
+                </div>
+            </div>
+            <div class="base-margin">
+                <div class="add-margin">
+                    <div class="footer-content-container">
+                        <div class="footer-nav">
+                            <ul class="footer-nav-list flex no-list-style">
+                                <li class="footer-nav-item"><a href="" class="white">HOME</a></li>
+                                <li class="footer-nav-item"><a href="" class="white">ABOUT US</a></li>
+                                <li class="footer-nav-item"><a href="" class="white">PROGRAMS</a></li>
+                                <li class="footer-nav-item"><a href="" class="white">CONTACT</a></li>
+                                <li class="footer-nav-item"><a href="" class="white">DONATE</a></li>
+                            </ul>
+                        </div>
+                        <P class="txt-center" style="color: #7d7d7d; font-size: small;"><strong>© 2023 THINK FREELY. ALL RIGHTS RESERVED.</strong></P>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-red-line red-bg"></div>
+        </footer>
+    </body>
+</html>

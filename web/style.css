@@ -1,0 +1,109 @@
+  
+  
+  .think-freely-media {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    color: #C51532;
+    background-color: #fff;
+  }
+
+  .alpha-fitness {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 800;
+    color: white;
+    background-color: #000;
+  }
+
+  .laguna-library {
+    font-family: Arial, sans-serif;
+    font-weight: 700;
+    color: white;
+    background-color: #77922F;
+    background-image: -webkit-gradient( linear, left top, left bottom, from( rgba( 255, 255, 255, 0.4 ) ), to( rgba( 255, 255, 255, 0 ) ) );
+  }
+
+  .palms {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    color: #fff;
+    background-color: #85cebc;
+  }
+
+  .black-aristocrat {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #444444;
+    background-color: white;
+  }
+
+  .brain-gear {
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 900;
+    color: white;
+    background-color: #ffce02;
+  }
+  
+  .main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(90deg, rgb(202, 58, 22),rgb(169, 202, 22), rgb(0, 162, 255), rgb(101, 13, 151), rgb(202, 58, 22));
+    /* background-image: 
+    linear-gradient(-45deg, rgba(0,0,0,0.125), transparent, rgba(0,0,0,0.125), transparent, rgba(0,0,0,0.125)); */
+    background-size: 1000% 100%;
+    animation: gradientAnimation 60s infinite alternate;
+  }
+  
+  @keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 200% 50%; }
+  }
+
+  .design-web-list {
+    display: flex;
+    justify-content: center;
+  }
+
+  .design-web-list>ul>li {
+    text-align: center;
+  }
+
+ h1,h2 {
+    text-align: center;
+    color: rgb(253, 251, 248);
+  }
+
+  ul {
+    /* background-color: #fff; */
+    padding: 20px;
+    /* border-radius: 5px; */
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  li {
+    /* margin-bottom: 10px; */
+  }
+
+  .button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+
+  .content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #f1f1f1;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }

@@ -1,0 +1,589 @@
+<!doctype html>
+<html ⚡>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        <link rel="icon" href="assets/images/favicon192.jpg" sizes="192x192"/>
+        <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.jpg"/>
+        <title>Laguna Public Library - Laguna Pueblo, NM | Build A Community of Readers @ The Laguna Public Library</title>
+        <link rel="canonical" href="">
+
+        <script async src="https://cdn.ampproject.org/v0.js"></script>
+
+
+        <style amp-custom>
+            /* Typhography */
+            /* use Roboto for bigger ones, text use helvetica */
+            h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{font-family: 'Arial', serif;}
+
+            p, a, span {
+                font-family: 'Arial', sans-serif;
+            }
+
+            h1,h2,h3,p, .navbar-items,.recent-list,.recent-list a,.navbar-items a, footer .basic-container .txt-center p span a {
+                color:#777777;
+            }
+
+            .recent-list,.recent-list a,.navbar-items a {
+                text-decoration: none;
+            }
+
+            .contact-bar, .contact-bar span a {
+                color: #A1A1A1;
+            }
+
+            .white {
+                color: white;
+            }
+
+            .black {
+                color: black;
+            }
+
+            .article-part-content div h2, .contact-bar span strong  {
+                font-weight: 800;
+            }
+            /* Typhography - end */
+
+            .no-decor {
+                text-decoration: none;
+            }
+
+            .no-list-style {
+                list-style: none;
+            }
+
+            .margin-auto {
+                margin: auto;
+            }
+
+            .no-margin {
+                margin: 0;
+            }
+
+            .margin-y-2em {
+                margin-block-start: 2em;
+                margin-block-end: 2em;
+            }
+
+            .inline-block {
+                display: inline-block;
+            }
+
+            .txt-center {
+                text-align: center;
+            }
+
+            .height-100 {
+                height: 100%;
+            }
+
+            .flex {
+                display: flex;
+            }
+
+            .flex-column {
+                flex-direction: column;
+            }
+
+            .space-between {
+                justify-content: space-between;
+            }
+
+            .flex-1 {
+                flex: 1;
+            }
+
+            .pad-y-10 {
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+
+            .pad-y-20 {
+                padding-top: 20px;
+                padding-bottom: 20px;
+            }
+
+            .pad-x-20 {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .bg {
+                /* background-color: purple; */
+                background: url(assets/images/2020_cslp_banner_05.webp) repeat-y center;
+                width: 100%;
+                height: 100%;
+            }
+
+            @media screen and (min-width:1280px) {
+                .bg {
+                    background-size: contain;
+                }
+                
+            }
+
+            .page-container {
+                padding-top: 10px;
+                margin-left: auto;
+                margin-right: auto;
+                width: 95vw;
+                max-width: 904px;
+                /* background-color: #777777; */
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            /* Header */
+            .header-container {
+                /* background-color: blue; */
+            }
+
+            .nav-container {
+                margin-top: 0;
+                margin-bottom: 0;
+                padding: 0 7px 0 7px;
+                gap: 5px;
+            }
+
+            .nav-item-container {
+                padding: 5px 5px 0 5px;
+                background-color: white;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+            }
+
+            .nav-item {
+                padding: 10px;
+                border-color: #6D842D;
+                background-color: #77922F;
+                background-image: -webkit-gradient( linear, left top, left bottom, from( rgba( 255, 255, 255, 0.4 ) ), to( rgba( 255, 255, 255, 0 ) ) );
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+            }
+
+            .nav-item a {
+                font-size: 12px;
+                color: white;
+                font-weight: bold;
+                text-decoration: none;
+            }
+
+            .header-banner-container {
+                padding: 5px;
+                border-radius: 5px;
+                background-color: white;
+                position: relative;
+            }
+
+            .header-banner {
+                border-radius: 5px;
+                overflow: hidden;
+            }
+
+            .site-title-wrapper {
+                position: absolute;
+                position: absolute;
+                top: 0px;
+                left: 20px;
+                right: 20px;
+            }
+
+            .site-title {
+                color: white;
+            }
+
+            @media screen and (max-width:539px) {
+                .site-title {
+                    font-size: x-large;
+                }
+            }
+
+            @media screen and (max-width:450px) {
+                .site-title {
+                    font-size: larger;
+                }
+            }
+            @media screen and (max-width:340px) {
+                .site-title {
+                    font-size: large;
+                }
+            }
+            
+            /* Header - End */
+
+            /* Main */
+
+            .main-container {
+                padding: 5px;
+                background-color: white;
+                border-radius: 5px;
+                gap: 5px;
+            }
+
+            .left-sidebar-container {
+                flex-grow: 0.15;
+            }
+            
+            .content-container {
+                flex-grow: 0.70;
+                border : solid 1px grey;
+                border-radius: 5px;
+            }
+
+            .right-sidebar-container {
+                flex-grow: 0.15;
+            }
+
+            .content-card-list {
+                flex-direction: column;
+                gap: 5px;
+            }
+
+            .sidebar-card-list {
+                flex-direction: column;
+                gap: 5px;
+            }
+
+            .sidebar-card-list, .content-card-list {
+                padding-inline-start: 0;
+                margin-block-start: 0;
+                margin-block-end: 0;
+            }
+
+            .content-card-container {
+                padding: 16px;
+            }
+
+            .sidebar-card-container{
+                /* background: linear-gradient(165deg, rgba(7,7,7,1) 0%, rgba(7,7,7,1) 30%, rgba(0,212,255,0) 40%); */
+                /* linear-gradient(160deg, rgba(7,7,7,1) 0%, rgba(7,7,7,1) 5%, rgba(0,212,255,0) 12%) */
+                border-top: solid 1px black;
+                border-left: solid 1px black;
+                /* padding: 1px; */
+                border-radius: 7px;
+            }
+
+            .sidebar-card {
+                border-radius: 5px;
+                background-color: white;
+                padding: 15px;
+            }
+
+            .widget-title, .content-card-title {
+                margin-top: 0;
+                margin-block-end: 0.25em;
+                color: #8dab3b;
+            }
+
+            .content-img-wrapper {
+                border: solid 1px grey;
+            }
+
+            .widget-img-wrapper {
+                /* filter: drop-shadow(0px 0px 15px #656565); */
+            }
+            
+            .base-text {
+                margin: 0;
+            }
+
+            .postdate {
+                color: #A12A2A;
+            }
+
+            @media screen and (max-width:899px) {
+                .main-container {
+                    flex-direction: column;
+                }
+
+                /* .main-container .left-sidebar-container { order: 2; }
+                .main-container .content-container { order: 1; }
+                .main-container .right-sidebar-container { order: 3; } */
+
+                .widget-img-wrapper {
+                    max-width: 150px;
+                    margin: auto;
+                }
+
+                /* .widget-title, .left-sidebar-container .base-text, .right-sidebar-container .base-text { */
+                .widget-title {
+                    text-align: center;
+                }
+            }
+
+            @media screen and (max-width:750px) {
+                .display-none-trigger {
+                    display: none;
+                }
+            }
+            
+            /* Main - END */
+
+            /* Footer */
+            .footer-container {
+                width: 75%;
+                margin: auto;
+                padding: 10px;
+                background: rgba(255,255,255,.8);
+            }
+
+            .footer-content-wrapper {
+                justify-content: space-between;
+            }
+
+            @media screen and (max-width:899px) {
+                .footer-content-wrapper {
+                    flex-direction: column;
+                }
+
+                .footer-content-wrapper p {
+                    text-align: center;
+                }
+            }
+            /* Footer - END */
+
+        </style>
+
+        <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    </head>
+
+    <body>
+        <div class="bg">
+            <div class="page-container flex">
+                <header>
+                    <div class="header-container">
+                        <nav>
+                            <ul class="nav-container flex no-list-style">
+                                <li class="nav-item-container">
+                                    <div class="nav-item"><a href="">Home</a></div>
+                                </li>
+                                <li class="nav-item-container display-none-trigger">
+                                    <div class="nav-item"><a href="">Hours</a></div>
+                                </li>
+                                <li class="nav-item-container display-none-trigger">
+                                    <div class="nav-item"><a href="">Online Catalog</a></div>
+                                </li>
+                                <li class="nav-item-container display-none-trigger">
+                                    <div class="nav-item"><a href="">Programs</a></div>
+                                </li>
+                                <li class="nav-item-container display-none-trigger">
+                                    <div class="nav-item"><a href="">Services</a></div>
+                                </li>
+                                <li class="nav-item-container display-none-trigger">
+                                    <div class="nav-item"><a href="">E-Books/AudioBooks</a></div>
+                                </li>
+                                <li class="nav-item-container display-none-trigger">
+                                    <div class="nav-item"><a href="">Contact Us</a></div>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="header-banner-container">
+                            <div class="header-banner">
+                                <amp-img src="assets/images/header.webp"
+                                  width="904"
+                                  height="185"
+                                  layout="responsive"
+                                  alt="Header">
+                                </amp-img>
+                            </div>
+                            <div class="site-title-wrapper">
+                                <h1 class="site-title">Laguna Public Library – Laguna Pueblo, NM</h1>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <main>
+                    <div class="main-container flex">
+                        <!-- Left Side Bar -->
+                        <aside class="left-sidebar-container">
+                            <ul class="sidebar-card-list no-list-style flex">
+                                <li class="sidebar-card-container">
+                                    <div class="sidebar-card">
+                                        <h2 class="widget-title">Welcome to the Laguna Public Library!</h2>
+                                        <p class="base-text">To keep this a comfortable and welcoming place in your community, please be considerate of others:</p>
+                                        <ul>
+                                            <li>
+                                                <p class="base-text">Speak at a conversational level.</p>
+                                            </li>
+                                            <li>
+                                                <p class="base-text">Place your cell phone on vibrate.  Take calls outside.</p>
+                                            </li>
+                                            <li>
+                                                <p class="base-text">Monitor and clean up after your children.</p>
+                                            </li>
+                                        </ul>
+                                        <p class="base-text"><br>All library visitors please sign in. Thank you!</p>
+                                    </div>
+                                </li>
+                                <li class="sidebar-card-container">
+                                    <div class="sidebar-card">
+                                        <h2 class="widget-title">Library Hours</h2>
+                                        <p class="base-text"><a href="">29 Rodeo Drive Laguna, NM 87026</a></p>
+                                        <p class="base-text">1-505-552-6280</p>
+                                        <ul class="no-list-style">
+                                            <li>
+                                                <p class="base-text">Monday - Friday</p>
+                                                <p class="base-text">8:00 am - 6.30 pm (Summer Hours)</p>
+                                                <p class="base-text">8:00 am - 5.30 pm (Winter Hours)</p>
+                                            </li>
+                                            <li>
+                                                <p class="base-text">Saturday</p>
+                                                <p class="base-text">9:00 am - 2.00 pm</p>
+                                            </li>
+                                            <li>
+                                                <p class="base-text">Sunday</p>
+                                                <p class="base-text">Closed</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="sidebar-card-container">
+                                    <div class="sidebar-card">
+                                        <h2 class="widget-title">Pueblo of Laguna</h2>
+                                        <div class="widget-img-wrapper">
+                                            <amp-img src="assets/images/laguna-logo.webp"
+                                              width="936"
+                                              height="605"
+                                              layout="responsive"
+                                              alt="Book Systems">
+                                            </amp-img>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="sidebar-card-container">
+                                    <div class="sidebar-card">
+                                        <h2 class="widget-title"><a href="">Find us On Facebook!</a></h2>
+                                    </div>
+                                </li>
+                            </ul>
+                        </aside>
+                        <!-- Left Side Bar - END -->
+                        <!-- Center Content -->
+                        <div class="content-container">
+                            <ul class="content-card-list no-list-style flex">
+                                <li class="content-card-container">
+                                    <div class="content-card">
+                                        <h2 class="content-card-title"><a href="">Vaccine is now available to Laguna Tribal Members</a></h2>
+                                        <p class="base-text content-date">Posted on <span class="postdate">January 22, 2021</span> by jkowemy</p>
+                                        <div class="content-desc-container">
+                                            <p class="base-text"><br>The Pueblo of Laguna is now offering Registration for the COVID-19 vaccine to enrolled Laguna tribal members, Laguna residents, and employees of Laguna entities/government offices who HAVE NOT received a COVID-19 vaccine yet. For more information and to register, click on the link below.</p>
+                                            <p class="base-text"><br><a href="">https://docs.google.com/forms/d/e/1FAIpQLSeC4yW7Aq7fojXPz-jvz0TqkOqnspTP6JxmaaC1KJ0Rz79BjQ/viewform</a></p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="content-card-container">
+                                    <div class="content-card">
+                                        <h2 class="content-card-title"><a href="">Library Closure</a></h2>
+                                        <p class="base-text content-date">Posted on <span class="postdate">March 17, 2020</span> by jkowemy</p>
+                                        <div class="content-desc-container">
+                                            <p class="base-text"><br></p>
+                                            <div class="content-img-wrapper">
+                                                <amp-img src="assets/images/skm_c364e20031618060_0001.webp"
+                                                  width="964"
+                                                  height="1247"
+                                                  layout="responsive"
+                                                  alt="Library Closure">
+                                                </amp-img>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="content-card-container">
+                                    <div class="content-card">
+                                        <h2 class="content-card-title"><a href="">Letters To Santa</a></h2>
+                                        <p class="base-text content-date">Posted on <span class="postdate">December 3, 2012</span> by jkowemy</p>
+                                        <div class="content-desc-container">
+                                            <p class="base-text"><br></p>
+                                            <div class="content-img-wrapper">
+                                                <amp-img src="assets/images/img_12941.webp"
+                                                  width="300"
+                                                  height="225"
+                                                  layout="responsive"
+                                                  alt="Letters to Santa">
+                                                </amp-img>
+                                            </div>
+                                            <p class="base-text"><br>Dear Parents and Guardians,<br>Children are invited to write and mail a letter to Santa at the</p>
+                                            <p class="base-text txt-center" style="color: #770000;"><b><strong>Laguna Public Library’s Santa Mailbox</strong></b></p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Center Content - END -->
+                        <!-- Right Side Bar -->
+                        <aside class="right-sidebar-container">
+                            <ul class="sidebar-card-list no-list-style flex">
+                                <li class="sidebar-card-container">
+                                    <div class="sidebar-card">
+                                        <h2 class="widget-title">Online Catalog</h2>
+                                        <div class="widget-img-wrapper">
+                                            <amp-img src="assets/images/book-systems-v2.webp"
+                                              width="936"
+                                              height="311"
+                                              layout="responsive"
+                                              alt="Book Systems">
+                                            </amp-img>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="sidebar-card-container">
+                                    <div class="sidebar-card">
+                                        <h2 class="widget-title">Laguna Language POV</h2>
+                                        <div class="widget-img-wrapper" style="overflow: hidden;
+                                                                                border-radius: 5px;
+                                                                                background-color: #e1ca00;
+                                                                                box-shadow: inset 0px 0px 5px #000000;">
+                                            <amp-img src="assets/images/logo_horizontal.webp"
+                                              width="231"
+                                              height="88"
+                                              layout="responsive"
+                                              alt="Laguna Language POV">
+                                            </amp-img>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="sidebar-card-container">
+                                    <div class="sidebar-card">
+                                        <h2 class="widget-title">El Portal</h2>
+                                        <div class="widget-img-wrapper">
+                                            <amp-img src="assets/images/elportal.webp"
+                                              width="160"
+                                              height="89"
+                                              layout="responsive"
+                                              alt="El Portal">
+                                            </amp-img>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="sidebar-card-container">
+                                    <div class="sidebar-card">
+                                        <h2 class="widget-title">Overdrive E-Books</h2>
+                                        <div class="widget-img-wrapper">
+                                            <amp-img src="assets/images/libby.webp"
+                                              width="348"
+                                              height="145"
+                                              layout="responsive"
+                                              alt="El Portal">
+                                            </amp-img>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </aside>
+                        <!-- Right Side Bar - END -->
+                    </div>
+                </main>
+                <footer>
+                    <div class="footer-container">
+                        <div class="footer-content-wrapper flex">
+                            <p class="base-text" style="color: #105cb6;"><b>Laguna Public Library – Laguna Pueblo, NM</b></p>
+                            <p class="base-text" style="color: #105cb6;">Website Powered by WordPress.com</p>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </body>
+</html>
